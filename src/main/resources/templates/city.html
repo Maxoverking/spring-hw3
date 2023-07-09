@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  .city-item {
+    font-size: 26px;
+    color: red;
+  }
+  .city-list{
+  list-style-type: none;
+  }
+  a{
+  text-decoration:none;
+  color: green;
+  }
+
+</style>
+<body>
+  <div style="margin: 30px;">
+    <h1>City list</h1>
+    <ul class="city-list" >
+      <li th:each="city : ${cityList}" th:text="${city}" class="city-item"/>
+    </ul>
+    <button><a href="/add">Add City</a></button>
+  </div>
+</body>
+</html>
